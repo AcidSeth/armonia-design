@@ -105,23 +105,27 @@
       </section>
       <section>
         <h1 id="chat"># Chat</h1>
-      <div class="chat">
-        <div id="chatUser">
-          <img id="chatUserImg" src="img/aldo.png" />
-          <p id="chatUserName">Aldo Baglio</p>
-          <p id="lastSeen">Ultimo accesso: 3 ore fa</p>
-        </div>
-        <div id="chatMessages">
-          <p>Ciao, come posso aiutarti?</p>
-          <p>Vorrei un etto di prosciutto</p>
-          <p>Ecco a te!</p>
-          <div id="gift">
-            <p>Nuovo regalo! &nbsp;&nbsp; 🦚</p>
-            <a href="#">ACCETTA DONO</a>
+        <div id="chatUI">
+          <div id="chatFeed">
+            <div id="chatUser">
+              <img id="chatUserImg" src="img/aldo.png" />
+                <div id="chatUserDetails">
+                  <p id="chatUserName">Aldo Baglio</p>
+                  <p id="lastSeen">Ultimo accesso: 3 ore fa</p>
+                </div>
+            </div>
+            <div id="chatMessages">
+              <p>Ciao, come posso aiutarti?</p>
+              <p>Vorrei un etto di prosciutto</p>
+              <p>Ecco a te!</p>
+              <div id="gift">
+                <p>Nuovo regalo! &nbsp;&nbsp; 🦚</p>
+                <a href="#">ACCETTA DONO</a>
+              </div>
+            </div>
           </div>
-        </div>
         <div id="sendMessageForm">
-          <input type="text" id="messageInput" name="messageInput" />
+          <input type="text" id="messageInput" name="messageInput" placeholder="Scrivi un messaggio..."/>
           <button id="sendMessageButton">Invia messaggio ></button>
         </div>
       </section>
@@ -189,7 +193,7 @@
             <td>
               <div class="user tableElement">
                 <img class="tableImg" src="img/aldo.png" />
-                <p class="tableUserName">Aldo Baglio</p>
+                <p id="tableUserName">Aldo Baglio</p>
               </div>
             </td>
             <td>32</td>
