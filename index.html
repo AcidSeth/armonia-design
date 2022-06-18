@@ -34,7 +34,6 @@
           Ciao!
           <br />
           <br />
-          <br />
           Mi chiamo
           <input
             type="text"
@@ -52,12 +51,17 @@
           . <br />
           Mi farebbe piacere partecipare a Ninja Campus perchè
           <br />
-          <textarea
+          <input
+            type="text"
             id="intro"
             name="intro"
             placeholder="Introduzione personale"
-            rows="2"
-          ></textarea>
+          ></input>
+          <input
+            type="text"
+            id="intro"
+            name="intro"
+          ></input>
           . <br />
           Il mio numero è
           <span>
@@ -70,10 +74,9 @@
               placeholder="Contatto telefonico"
               minlength="10"
               maxlength="15"
-              required
             />
           </span>
-          o potete contattarmi sull’indirizzo email
+          <br /> o potete contattarmi sull’indirizzo email
           <span>
             <label for="email" class="invalid">MAIL NON VALIDA</label>
             <input
@@ -81,16 +84,20 @@
               id="email"
               class="invalid"
               placeholder="Contatto email"
-              required
             />
           </span>
           . <br />
-          <textarea
+          <input 
+            type="text"
             id="details"
             name="details"
             placeholder="Domande e dettagli"
-            rows="2"
-          ></textarea>
+          ></input>
+          <input
+            type="text"
+            id="intro"
+            name="intro"
+          ></input>
           <br />
           Grazie.
         </p>
@@ -98,7 +105,7 @@
       </section>
       <section>
         <h1 id="chat"># Chat</h1>
-      <div id="chat">
+      <div class="chat">
         <div id="chatUser">
           <img id="chatUserImg" src="img/aldo.png" />
           <p id="chatUserName">Aldo Baglio</p>
@@ -109,7 +116,7 @@
           <p>Vorrei un etto di prosciutto</p>
           <p>Ecco a te!</p>
           <div id="gift">
-            <p>Nuovo regalo! &nbsp; &nbsp; &nbsp; 🦚</p>
+            <p>Nuovo regalo! &nbsp;&nbsp; 🦚</p>
             <a href="#">ACCETTA DONO</a>
           </div>
         </div>

@@ -55,20 +55,63 @@ a:link, a:visited {
 
 #main {
     display: flex;
-    flex: ;
+    flex: 1 1 0;
     flex-flow: column wrap;
+    align-items: center;
 }
 
 section {
-    flex: auto;
+    min-width: 860px;
     display: flex;
+    flex: 1 1 auto;
     flex-flow: column wrap;
+    padding: 0.5em;
+}
+
+section > p {
+    max-width: 860px;
+    max-height: 420px;
+    font-size: 22px;
+    line-height: 39px;
+    opacity: 0.4;
+}
+
+section > h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 100;
+    color: transparent;
+    -webkit-text-stroke: 0.75px black;
 }
 
 input, textarea {
+    font-size: 20px;
     font-style: italic;
+    line-height: 25px;
     resize: none;
+    border-style: none none dashed none;
+    border-bottom: 1px solid dashed;
   }
+
+p > input {
+    width: 25%;
+}
+
+#intro, #details {
+    width: 95%
+}
+
+button.pageButton {
+    background: #EAEAEA 0% 0% no-repeat padding-box;
+    color: #333333;
+    font-size: 22px;
+    line-height: 28px;
+    padding: 20px;
+    flex: 1 1 0;
+    display: inline-flex;
+    align-self: flex-start;
+    border: none;
+}
 
 span {
     display: inline-block;
@@ -80,7 +123,8 @@ span {
 label.invalid {
     color: red;
     font-size: 10px;
-    margin: 0px;
+    font-style: normal;
+    margin: -15px 0px -18px 0px;
     display: block;
 }   
 
