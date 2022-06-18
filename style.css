@@ -10,7 +10,6 @@ body {
     height: 100vh;
     background: #90CCAC;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     flex: 0.5;
     flex-flow: column nowrap;
@@ -28,7 +27,7 @@ h1.sidebar {
 }
 
 #sidebar > div.sidebar {
-    margin: 25px 0px;
+    margin: 38px 87px 38px 30px;
 }
 
 #sidebar1 {
