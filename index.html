@@ -14,8 +14,8 @@
     />
   </head>
   <body>
+    <h1 class="header">Componenti</h1>
     <div class="sidebar">
-      <h1 class="header">Componenti</h1>
       <ul>
         <li><a href="#contact">Modulo di contatto</a></li>
         <li><a href="#chat">Chat</a></li>
@@ -90,12 +90,27 @@
           <br />
           Grazie.
         </p>
-        <button type="button" class="outerButton">INVIA MESSAGGIO ></button>
+        <button type="button" class="pageButton">INVIA MESSAGGIO ></button>
       </div>
+      <h1>Chat</h1>
       <div id="chat">
-        <h1>Chat</h1>
         <div id="chatUser">
           <img src="img/aldo.png" />
+          <p id="chatUsername">Aldo Baglio</p>
+          <p id="lastSeen">Ultimo accesso: 3 ore fa</p>
+        </div>
+        <div id="chatMessages">
+          <p>Ciao, come posso aiutarti?</p>
+          <p>Vorrei un etto di prosciutto</p>
+          <p>Ecco a te!</p>
+          <div id="gift">
+            <p>Nuovo regalo! &nbsp; &nbsp; &nbsp; 🦚</p>
+            <a href="#">ACCETTA DONO</a>
+          </div>
+        </div>
+        <div id="sendMessageForm">
+          <input type="text" id="messageInput" name="messageInput" />
+          <button id="chatButton">Invia messaggio ></button>
         </div>
       </div>
     </div>
