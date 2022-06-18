@@ -1,4 +1,4 @@
-{
+* {
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -6,10 +6,6 @@ input, textarea {
     font-style: italic;
     resize: none;
   }
-
-.contact {
-    
-}
 
 span {
     display: inline-block;
@@ -28,4 +24,8 @@ label.invalid {
 input.invalid {
     border-color: red;
     display: block;
+}
+
+table {
+    border: 1px solid;
 }

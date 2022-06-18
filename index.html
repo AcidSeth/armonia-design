@@ -19,13 +19,13 @@
       <ul>
         <li><a href="#contact">Modulo di contatto</a></li>
         <li><a href="#chat">Chat</a></li>
-        <li><a href="#table">Stylish table</a></li>
+        <li><a href="#stylishTable">Stylish table</a></li>
       </ul>
       <div class="footer"><> by <b>De</b> Pasquale</div>
     </div>
     <div class="main">
-      <div class="contact">
-        <h1>Modulo di contatto</h1>
+      <div>
+        <h1 id="contact"># Modulo di contatto</h1>
         <p>
           Ciao!
           <br />
@@ -92,11 +92,11 @@
         </p>
         <button type="button" class="pageButton">INVIA MESSAGGIO ></button>
       </div>
-      <h1>Chat</h1>
+      <h1 id="chat"># Chat</h1>
       <div id="chat">
         <div id="chatUser">
-          <img src="img/aldo.png" />
-          <p id="chatUsername">Aldo Baglio</p>
+          <img id="chatUserImg" src="img/aldo.png" />
+          <p id="chatUserName">Aldo Baglio</p>
           <p id="lastSeen">Ultimo accesso: 3 ore fa</p>
         </div>
         <div id="chatMessages">
@@ -110,8 +110,80 @@
         </div>
         <div id="sendMessageForm">
           <input type="text" id="messageInput" name="messageInput" />
-          <button id="chatButton">Invia messaggio ></button>
+          <button id="sendMessageButton">Invia messaggio ></button>
         </div>
+      </div>
+      <h1 id="stylishTable"># Stylish table</h1>
+      <button id="tableResetButton" class="pageButton">Ricarica dati</button>
+      <div id="stylishTable">
+        <table>
+          <tr>
+            <th>Cliente</th>
+            <th>Età</th>
+            <th>Posizione</th>
+            <th>Azioni</th>
+          </tr>
+          <tr class="blankRow">
+            <td colspan="3"></td>
+            <td>
+              <div class="user tableElement">
+                <img id="chatUserImg" src="img/aldo.png" />
+                <p id="chatUserName">Aldo Baglio</p>
+              </div>
+            </td>
+            <td>32</td>
+            <td>Comico professionista</td>
+            <td><a href="#">Cancella</a></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td>
+              <div class="user tableElement">
+                <img id="chatUserImg" src="img/aldo.png" />
+                <p id="chatUserName">Aldo Baglio</p>
+              </div>
+            </td>
+            <td>32</td>
+            <td>Comico professionista</td>
+            <td><a href="#">Cancella</a></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td>
+              <div class="user tableElement">
+                <img id="chatUserImg" src="img/aldo.png" />
+                <p id="chatUserName">Aldo Baglio</p>
+              </div>
+            </td>
+            <td>32</td>
+            <td>Comico professionista</td>
+            <td><a href="#">Cancella</a></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td>
+              <div class="user tableElement">
+                <img id="chatUserImg" src="img/aldo.png" />
+                <p id="chatUserName">Aldo Baglio</p>
+              </div>
+            </td>
+            <td>32</td>
+            <td>Comico professionista</td>
+            <td><a href="#">Cancella</a></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td>
+              <div class="user tableElement">
+                <img id="chatUserImg" src="img/aldo.png" />
+                <p id="chatUserName">Aldo Baglio</p>
+              </div>
+            </td>
+            <td>32</td>
+            <td>Comico professionista</td>
+            <td><a href="#">Cancella</a></td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>
