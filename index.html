@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armonia Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1 class="header">Componenti</h1>
+      <ul>
+        <li><a href="#contact">Modulo di contatto</a></li>
+        <li><a href="#chat">Chat</a></li>
+        <li><a href="#table">Stylish table</a></li>
+      </ul>
+      <div class="footer"><> by <b>De</b> Pasquale</div>
+    </div>
+    <div class="main">
+      <div class="contact">
+        <h1>Modulo di contatto</h1>
+        <p>
+          Ciao!
+          <br />
+          <br />
+          <br />
+          Mi chiamo
+          <input
+            type="text"
+            id="nomeCognome"
+            name="nomeCognome"
+            placeholder="Nome e cognome"
+          />
+          e al momento
+          <input
+            type="text"
+            id="occupazione"
+            name="occupazione"
+            placeholder="Occupazione"
+          />
+          . <br />
+          Mi farebbe piacere partecipare a Ninja Campus perchè
+          <br />
+          <textarea
+            id="intro"
+            name="intro"
+            placeholder="Introduzione personale"
+            rows="2"
+          ></textarea>
+          . <br />
+          Il mio numero è
+          <span>
+            <label for="cell" class="invalid">TELEFONO NON VALIDO</label>
+            <input
+              type="tel"
+              id="cell"
+              class="invalid"
+              name="cell"
+              placeholder="Contatto telefonico"
+              minlength="10"
+              maxlength="15"
+              required
+            />
+          </span>
+          o potete contattarmi sull’indirizzo email
+          <span>
+            <label for="email" class="invalid">MAIL NON VALIDA</label>
+            <input
+              type="email"
+              id="email"
+              class="invalid"
+              placeholder="Contatto email"
+              required
+            />
+          </span>
+          . <br />
+          <textarea
+            id="details"
+            name="details"
+            placeholder="Domande e dettagli"
+            rows="2"
+          ></textarea>
+          <br />
+          Grazie.
+        </p>
+        <button type="button" class="outerButton">INVIA MESSAGGIO ></button>
+      </div>
+      <div id="chat">
+        <h1>Chat</h1>
+        <div id="chatUser">
+            <img
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

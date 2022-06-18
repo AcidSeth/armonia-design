@@ -1,0 +1,27 @@
+input, textarea {
+    font-style: italic;
+    resize: none;
+  }
+
+.contact {
+    
+}
+
+span {
+    display: inline-block;
+    flex-direction: column;
+    vertical-align: baseline;
+}
+
+
+label.invalid {
+    color: red;
+    font-size: 10px;
+    margin: 0px;
+    display: block;
+}   
+
+input.invalid {
+    border-color: red;
+    display: block;
+}
