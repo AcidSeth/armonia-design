@@ -9,22 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro,wght@1,300&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1 class="header">Componenti</h1>
-    <div class="sidebar">
+    <div id="sidebar" class="sidebar">
+      <div id="sidebar1" class="sidebar">
+        <h1 class="sidebar">Componenti</h1>
       <ul>
         <li><a href="#contact">Modulo di contatto</a></li>
         <li><a href="#chat">Chat</a></li>
         <li><a href="#stylishTable">Stylish table</a></li>
       </ul>
-      <div class="footer"><> by <b>De</b> Pasquale</div>
     </div>
-    <div class="main">
-      <div>
+      <div id="sidebar2" class="sidebar">
+        <div id="footer"><> by <b>De</b> Pasquale</div>
+      </div>
+    </div>
+    <div id="main">
+      <section>
         <h1 id="contact"># Modulo di contatto</h1>
         <p>
           Ciao!
@@ -91,8 +95,9 @@
           Grazie.
         </p>
         <button type="button" class="pageButton">INVIA MESSAGGIO ></button>
-      </div>
-      <h1 id="chat"># Chat</h1>
+      </section>
+      <section>
+        <h1 id="chat"># Chat</h1>
       <div id="chat">
         <div id="chatUser">
           <img id="chatUserImg" src="img/aldo.png" />
@@ -112,10 +117,11 @@
           <input type="text" id="messageInput" name="messageInput" />
           <button id="sendMessageButton">Invia messaggio ></button>
         </div>
-      </div>
-      <h1 id="stylishTable"># Stylish table</h1>
-      <button id="tableResetButton" class="pageButton">Ricarica dati</button>
-      <div id="stylishTable">
+      </section>
+      <section>
+        <h1 id="stylishTable"># Stylish table</h1>
+        <button id="tableResetButton" class="pageButton">Ricarica dati</button>
+        <div id="stylishTable">
         <table>
           <tr>
             <th>Cliente</th>
@@ -127,7 +133,7 @@
             <td colspan="3"></td>
             <td>
               <div class="user tableElement">
-                <img id="chatUserImg" src="img/aldo.png" />
+                <img class="tableImg" src="img/aldo.png" />
                 <p id="chatUserName">Aldo Baglio</p>
               </div>
             </td>
@@ -139,8 +145,8 @@
             <td colspan="3"></td>
             <td>
               <div class="user tableElement">
-                <img id="chatUserImg" src="img/aldo.png" />
-                <p id="chatUserName">Aldo Baglio</p>
+                <img class="tableImg" src="img/aldo.png" />
+                <p class="tableUserName">Aldo Baglio</p>
               </div>
             </td>
             <td>32</td>
@@ -151,8 +157,8 @@
             <td colspan="3"></td>
             <td>
               <div class="user tableElement">
-                <img id="chatUserImg" src="img/aldo.png" />
-                <p id="chatUserName">Aldo Baglio</p>
+                <img class="tableImg" src="img/aldo.png" />
+                <p class="tableUserName">Aldo Baglio</p>
               </div>
             </td>
             <td>32</td>
@@ -163,8 +169,8 @@
             <td colspan="3"></td>
             <td>
               <div class="user tableElement">
-                <img id="chatUserImg" src="img/aldo.png" />
-                <p id="chatUserName">Aldo Baglio</p>
+                <img class="tableImg" src="img/aldo.png" />
+                <p class="tableUserName">Aldo Baglio</p>
               </div>
             </td>
             <td>32</td>
@@ -175,8 +181,8 @@
             <td colspan="3"></td>
             <td>
               <div class="user tableElement">
-                <img id="chatUserImg" src="img/aldo.png" />
-                <p id="chatUserName">Aldo Baglio</p>
+                <img class="tableImg" src="img/aldo.png" />
+                <p class="tableUserName">Aldo Baglio</p>
               </div>
             </td>
             <td>32</td>
@@ -185,6 +191,7 @@
           </tr>
         </table>
       </div>
+      </section>
     </div>
   </body>
 </html>
