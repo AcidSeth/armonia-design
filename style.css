@@ -99,6 +99,7 @@ textarea {
   resize: none;
   border-style: none none dashed none;
   border-bottom: 1px solid dashed;
+  outline: none;
 }
 
 p > input {
@@ -168,19 +169,92 @@ p#lastSeen {
 #chatFeed {
   border: 1px solid #b6bdc1;
   padding: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 45px;
 }
 
 #sendMessageForm {
   border: 15px solid #f4f6f7;
   display: flex;
   justify-content: space-between;
-  flex: 2;
+}
+
+#chatMessages {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#chatMessages > div {
+  padding: 10px;
+  background: #e6f7ff;
+  border-radius: 5px;
+}
+
+#chatMessages > div::before {
+  content: "";
+  position: absolute;
+  top: -webkit-calc(100% - 10px); /*may require prefix for old browser support*/
+  top: calc(100% - 10px); /*i.e. half the height*/
+  left: 20px;
+  height: 20px;
+  width: 20px;
+  background: gray;
+  transform: rotate(45deg);
+  border-bottom: inherit;
+  border-right: inherit;
+  box-shadow: inherit;
+}
+
+/* #chatMessages > div::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 0px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: lightyellow lightyellow transparent transparent;
+} */
+
+#chatMessages :nth-child(2) {
+  background: #f4f6f7;
+  align-self: flex-end;
+}
+
+#chatMessages :nth-child(4) {
+  background: #f4f6f7;
+  padding: 20px;
+}
+
+#gift {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#gift > a {
+  color: #333333;
 }
 
 #messageInput {
   border-style: none;
   padding: 0px 25px;
   flex: 1;
+}
+
+#messageInput::-webkit-input-placeholder {
+  color: #cccccc;
+  font: normal normal normal 14px/18px "Source Code Pro", monospace;
+}
+
+#messageInput::focus-visible {
+  
 }
 
 #sendMessageButton {
