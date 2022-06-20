@@ -17,192 +17,192 @@
     <div id="sidebar" class="sidebar">
       <div id="sidebar1" class="sidebar">
         <h1 class="sidebar">Componenti</h1>
-      <ul>
-        <li><a href="#contact">Modulo di contatto</a></li>
-        <li><a href="#chat">Chat</a></li>
-        <li><a href="#stylishTable">Stylish table</a></li>
-      </ul>
-    </div>
+        <ul>
+          <li><a href="#contact">Modulo di contatto</a></li>
+          <li><a href="#chat">Chat</a></li>
+          <li><a href="#stylishTable">Stylish table</a></li>
+        </ul>
+      </div>
       <div id="sidebar2" class="sidebar">
         <div id="footer"><> by <b>De</b> Pasquale</div>
       </div>
     </div>
-    <div id="main">
+    <main>
       <section>
-        <h1 id="contact"># Modulo di contatto</h1>
-        <p>
-          Ciao!
-          <br />
-          <br />
-          Mi chiamo
-          <input
-            type="text"
-            id="nomeCognome"
-            name="nomeCognome"
-            placeholder="Nome e cognome"
-          />
-          e al momento
-          <input
-            type="text"
-            id="occupazione"
-            name="occupazione"
-            placeholder="Occupazione"
-          />
-          . <br />
-          Mi farebbe piacere partecipare a Ninja Campus perchè
-          <br />
-          <input
-            type="text"
-            id="intro"
-            name="intro"
-            placeholder="Introduzione personale"
-          ></input>
-          <input
-            type="text"
-            id="intro"
-            name="intro"
-          ></input>
-          . <br />
-          Il mio numero è
-          <span>
-            <label for="cell" class="invalid">TELEFONO NON VALIDO</label>
+          <h1 id="contact"># Modulo di contatto</h1>
+          <p>
+            Ciao!
+            <br />
+            <br />
+            Mi chiamo
             <input
-              type="tel"
-              id="cell"
-              class="invalid"
-              name="cell"
-              placeholder="Contatto telefonico"
-              minlength="10"
-              maxlength="15"
+              type="text"
+              id="nomeCognome"
+              name="nomeCognome"
+              placeholder="Nome e cognome"
             />
-          </span>
-          <br /> o potete contattarmi sull’indirizzo email
-          <span>
-            <label for="email" class="invalid">MAIL NON VALIDA</label>
+            e al momento
             <input
-              type="email"
-              id="email"
-              class="invalid"
-              placeholder="Contatto email"
+              type="text"
+              id="occupazione"
+              name="occupazione"
+              placeholder="Occupazione"
             />
-          </span>
-          . <br />
-          <input 
-            type="text"
-            id="details"
-            name="details"
-            placeholder="Domande e dettagli"
-          ></input>
-          <input
-            type="text"
-            id="intro"
-            name="intro"
-          ></input>
-          <br />
-          Grazie.
-        </p>
-        <button type="button" class="pageButton">INVIA MESSAGGIO ></button>
+            . <br />
+            Mi farebbe piacere partecipare a Ninja Campus perchè
+            <br />
+            <input
+              type="text"
+              id="intro"
+              name="intro"
+              placeholder="Introduzione personale"
+            ></input>
+            <input
+              type="text"
+              id="intro"
+              name="intro"
+            ></input>
+            . <br />
+            Il mio numero è
+            <span>
+              <label for="cell" class="invalid">TELEFONO NON VALIDO</label>
+              <input
+                type="tel"
+                id="cell"
+                class="invalid"
+                name="cell"
+                placeholder="Contatto telefonico"
+                minlength="10"
+                maxlength="15"
+              />
+            </span>
+            <br /> o potete contattarmi sull’indirizzo email
+            <span>
+              <label for="email" class="invalid">MAIL NON VALIDA</label>
+              <input
+                type="email"
+                id="email"
+                class="invalid"
+                placeholder="Contatto email"
+              />
+            </span>
+            . <br />
+            <input 
+              type="text"
+              id="details"
+              name="details"
+              placeholder="Domande e dettagli"
+            ></input>
+            <input
+              type="text"
+              id="intro"
+              name="intro"
+            ></input>
+            <br />
+            Grazie.
+          </p>
+          <button type="button" class="pageButton">INVIA MESSAGGIO ></button>
       </section>
       <section>
-        <h1 id="chat"># Chat</h1>
-        <div id="chatUI">
-          <div id="chatFeed">
-            <div id="chatUser">
-              <img id="chatUserImg" src="img/aldo.png" />
-                <div id="chatUserDetails">
-                  <p id="chatUserName">Aldo Baglio</p>
-                  <p id="lastSeen">Ultimo accesso: 3 ore fa</p>
+          <h1 id="chat"># Chat</h1>
+          <div id="chatUI">
+            <div id="chatFeed">
+              <div id="chatUser">
+                <img id="chatUserImg" src="img/aldo.png" />
+                  <div id="chatUserDetails">
+                    <p id="chatUserName">Aldo Baglio</p>
+                    <p id="lastSeen">Ultimo accesso: 3 ore fa</p>
+                  </div>
+              </div>
+              <div id="chatMessages">
+                <div class="chatMessage">Ciao, come posso aiutarti?</div>
+                <div class="chatMessage">Vorrei un etto di prosciutto</div>
+                <div class="chatMessage">Ecco a te!</div>
+                <div id="gift">
+                  <p>Nuovo regalo! &nbsp; 🦚</p>
+                  <a href="#">ACCETTA DONO</a>
                 </div>
-            </div>
-            <div id="chatMessages">
-              <p>Ciao, come posso aiutarti?</p>
-              <p>Vorrei un etto di prosciutto</p>
-              <p>Ecco a te!</p>
-              <div id="gift">
-                <p>Nuovo regalo! &nbsp;&nbsp; 🦚</p>
-                <a href="#">ACCETTA DONO</a>
               </div>
             </div>
+          <div id="sendMessageForm">
+            <input type="text" id="messageInput" name="messageInput" placeholder="Scrivi un messaggio..."/>
+            <button id="sendMessageButton">Invia messaggio ></button>
           </div>
-        <div id="sendMessageForm">
-          <input type="text" id="messageInput" name="messageInput" placeholder="Scrivi un messaggio..."/>
-          <button id="sendMessageButton">Invia messaggio ></button>
+      </section>
+      <section>
+          <h1 id="stylishTable"># Stylish table</h1>
+          <button id="tableResetButton" class="pageButton">Ricarica dati</button>
+          <div id="stylishTable">
+          <table>
+            <tr>
+              <th>Cliente</th>
+              <th>Età</th>
+              <th>Posizione</th>
+              <th>Azioni</th>
+            </tr>
+            <tr class="blankRow">
+              <td colspan="3"></td>
+              <td>
+                <div class="user tableElement">
+                  <img class="tableImg" src="img/aldo.png" />
+                  <p id="chatUserName">Aldo Baglio</p>
+                </div>
+              </td>
+              <td>32</td>
+              <td>Comico professionista</td>
+              <td><a href="#">Cancella</a></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>
+                <div class="user tableElement">
+                  <img class="tableImg" src="img/aldo.png" />
+                  <p class="tableUserName">Aldo Baglio</p>
+                </div>
+              </td>
+              <td>32</td>
+              <td>Comico professionista</td>
+              <td><a href="#">Cancella</a></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>
+                <div class="user tableElement">
+                  <img class="tableImg" src="img/aldo.png" />
+                  <p class="tableUserName">Aldo Baglio</p>
+                </div>
+              </td>
+              <td>32</td>
+              <td>Comico professionista</td>
+              <td><a href="#">Cancella</a></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>
+                <div class="user tableElement">
+                  <img class="tableImg" src="img/aldo.png" />
+                  <p class="tableUserName">Aldo Baglio</p>
+                </div>
+              </td>
+              <td>32</td>
+              <td>Comico professionista</td>
+              <td><a href="#">Cancella</a></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>
+                <div class="user tableElement">
+                  <img class="tableImg" src="img/aldo.png" />
+                  <p id="tableUserName">Aldo Baglio</p>
+                </div>
+              </td>
+              <td>32</td>
+              <td>Comico professionista</td>
+              <td><a href="#">Cancella</a></td>
+            </tr>
+          </table>
         </div>
       </section>
-      <section>
-        <h1 id="stylishTable"># Stylish table</h1>
-        <button id="tableResetButton" class="pageButton">Ricarica dati</button>
-        <div id="stylishTable">
-        <table>
-          <tr>
-            <th>Cliente</th>
-            <th>Età</th>
-            <th>Posizione</th>
-            <th>Azioni</th>
-          </tr>
-          <tr class="blankRow">
-            <td colspan="3"></td>
-            <td>
-              <div class="user tableElement">
-                <img class="tableImg" src="img/aldo.png" />
-                <p id="chatUserName">Aldo Baglio</p>
-              </div>
-            </td>
-            <td>32</td>
-            <td>Comico professionista</td>
-            <td><a href="#">Cancella</a></td>
-          </tr>
-          <tr>
-            <td colspan="3"></td>
-            <td>
-              <div class="user tableElement">
-                <img class="tableImg" src="img/aldo.png" />
-                <p class="tableUserName">Aldo Baglio</p>
-              </div>
-            </td>
-            <td>32</td>
-            <td>Comico professionista</td>
-            <td><a href="#">Cancella</a></td>
-          </tr>
-          <tr>
-            <td colspan="3"></td>
-            <td>
-              <div class="user tableElement">
-                <img class="tableImg" src="img/aldo.png" />
-                <p class="tableUserName">Aldo Baglio</p>
-              </div>
-            </td>
-            <td>32</td>
-            <td>Comico professionista</td>
-            <td><a href="#">Cancella</a></td>
-          </tr>
-          <tr>
-            <td colspan="3"></td>
-            <td>
-              <div class="user tableElement">
-                <img class="tableImg" src="img/aldo.png" />
-                <p class="tableUserName">Aldo Baglio</p>
-              </div>
-            </td>
-            <td>32</td>
-            <td>Comico professionista</td>
-            <td><a href="#">Cancella</a></td>
-          </tr>
-          <tr>
-            <td colspan="3"></td>
-            <td>
-              <div class="user tableElement">
-                <img class="tableImg" src="img/aldo.png" />
-                <p id="tableUserName">Aldo Baglio</p>
-              </div>
-            </td>
-            <td>32</td>
-            <td>Comico professionista</td>
-            <td><a href="#">Cancella</a></td>
-          </tr>
-        </table>
-      </div>
-      </section>
-    </div>
+    </main>
   </body>
 </html>
