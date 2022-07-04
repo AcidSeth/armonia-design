@@ -99,12 +99,12 @@ section h1 {
   -webkit-text-stroke: 0.75px black;
 }
 
-form input::placeholder,
+#contactForm input::placeholder,
 textarea::placeholder {
   font: italic normal 300 20px/25px Source Code Pro;
 }
 
-form input {
+#contactForm input {
   font: italic normal 800 20px/25px Source Code Pro;
   resize: none;
   border-style: none none dashed none;
@@ -117,12 +117,14 @@ form > input {
   width: 25%;
 }
 
-#introSpan, #detailsSpan {
+#introSpan,
+#detailsSpan {
   width: 95%;
 }
 
-#intro, #details{
-  width: 100%
+#intro,
+#details {
+  width: 100%;
 }
 
 span {
@@ -158,6 +160,7 @@ form input.invalid {
   justify-content: flex-start;
   align-items: flex-end;
   gap: 25px;
+  padding: 0px 10px 20px;
 }
 
 p#chatUserName {
@@ -173,10 +176,10 @@ p#lastSeen {
 
 #chatFeed {
   border: 1px solid #b6bdc1;
-  padding: 35px 35px 75px 35px;
+  padding: 15px 35px 35px 35px;
   display: flex;
   flex-flow: column wrap;
-  gap: 50px;
+  max-height: 860px;
 }
 
 #sendMessageForm {
@@ -187,25 +190,49 @@ p#lastSeen {
 
 #chatMessages {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 8px;
+  overflow-y: auto;
+  gap: 15px;
+  padding: 10px;
+  max-height: 250px;
+}
+
+#chatMessages::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
+::-webkit-scrollbar-track {
+  background: #ececec;
+  border-radius: 5px;
 }
 
 #chatMessages > div {
   width: 250px;
-  background: #e6f7ff;
   border-radius: 5px;
   position: relative;
   padding: 12px 30px 12px 15px;
   font: normal normal normal 14px/18px Source Code Pro;
   color: #333333;
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-align:justify;
+  white-space: normal;
 }
 
-#chatMessages > div.chatMessage:before {
+.chatMessage.theirs {
+  background: #e6f7ff;
+}
+
+.chatMessage.theirs:before {
   content: "";
   position: absolute;
+  z-index: auto;
   bottom: 70%;
   left: 20px;
   height: 12px;
@@ -218,12 +245,12 @@ p#lastSeen {
   box-shadow: inherit;
 }
 
-#chatMessages :nth-child(2).chatMessage {
+.chatMessage.mine {
   background: #f4f6f7;
   align-self: flex-end;
 }
 
-#chatMessages :nth-child(2).chatMessage:before {
+.chatMessage.mine:before {
   content: "";
   position: absolute;
   top: 100%;
@@ -235,12 +262,13 @@ p#lastSeen {
   transform: rotate(45deg) translate(-50%);
 }
 
-#chatMessages :nth-child(4) {
+#gift {
   background: #f4f6f7;
   padding: 4px 22.5px 20px;
   display: flex;
   flex-flow: column;
   gap: 5px;
+  transition: all 0.5s;
 }
 
 #gift > span {
@@ -248,6 +276,10 @@ p#lastSeen {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
+}
+
+.clicked {
+  transform: scale(1.05);
 }
 
 #giftIcon {
@@ -258,6 +290,7 @@ p#lastSeen {
   color: #333333;
   align-self: center;
 }
+
 
 #sendMessageForm {
   background: #f4f6f7;

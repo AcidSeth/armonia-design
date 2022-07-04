@@ -104,11 +104,38 @@ $("#contactForm").on("submit", function (e) {
   }
 });
 
+// Chat
 
-const sendMessage = () => {
+const theirReply = () => {
+  $("#chatMessages").append(
+    $("<div/>").addClass("chatMessage theirs").append("<div/>").text("...")
+  );
+  setTimeout(() => {
+    $(".chatMessage.theirs").last().text("Miiinchia!");
+  }, 2000);
+};
 
-}
+$("#sendMessageForm").on("submit", function (e) {
+  e.preventDefault();
+  let myMessage = $("#messageInput").val();
+  if (myMessage !== "") {
+    $("#chatMessages").append(
+      $("<div/>")
+        .addClass("chatMessage mine")
+        .append("<div/>")
+        .text(`${myMessage}`)
+    );
+    $("#messageInput").val("");
+    theirReply();
+    $("#chatMessages").scrollTop(function () {
+      return this.scrollHeight;
+    });
+  }
+});
 
-const reply = () => {
-  
-}
+$("#gift a, #giftIcon").click(() => {
+  $("#gift").toggleClass("clicked");
+});
+
+// Tabella
+
