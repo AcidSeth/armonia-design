@@ -126,7 +126,7 @@ $("#sendMessageForm").on("submit", function (e) {
         .text(`${myMessage}`)
     );
     if (myMessage === "Sono il conte Dracula!") {
-      $("#giftIcon").html('<img src="/img/contedracula.png">');
+      $("#giftIcon").html('<img src="./img/contedracula.png">');
     }
     $("#messageInput").val("");
     theirReply();
