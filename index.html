@@ -11,6 +11,8 @@
     <link 
     href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap"
     rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <div id="sidebar" class="sidebar">
@@ -29,63 +31,76 @@
     <main>
       <section>
           <h1 id="contact"># Modulo di contatto</h1>
-          <form>
+          <form id="contactForm">
             Ciao!
             <br />
             <br />
             Mi chiamo
+            <span>
+            <label id="nomeError">CAMPO OBBLIGATORIO</label>
             <input
               type="text"
               id="nomeCognome"
               name="nomeCognome"
               placeholder="Nome e cognome"
+              maxlength="20"
             />
+            </span>
             e al momento
+            <span>
+            <label id="occupazioneError">CAMPO OBBLIGATORIO</label>
             <input
               type="text"
               id="occupazione"
               name="occupazione"
               placeholder="Occupazione"
+              maxlength="20"
             />
+            </span>
             . <br />
             Mi farebbe piacere partecipare a Ninja Campus perchè
             <br />
+            <span id="introSpan">
+            <label id="introError">CAMPO OBBLIGATORIO</label>
             <input
               type="text"
               id="intro"
+              class="introInput"
               name="intro"
               placeholder="Introduzione personale"
+              maxlength="68"
             ></input>
             <input
               type="text"
               id="intro"
+              class="introInput"
               name="intro"
+              maxlength="68"
             ></input>
+            </span>
             . <br />
             Il mio numero è
             <span>
-              <label for="cell" class="invalid">TELEFONO NON VALIDO</label>
+              <label id="cellError">CAMPO OBBLIGATORIO</label>
               <input
                 type="tel"
                 id="cell"
-                class="invalid"
                 name="cell"
                 placeholder="Contatto telefonico"
-                minlength="10"
                 maxlength="15"
               />
             </span>
             <br /> o potete contattarmi sull’indirizzo email
             <span>
-              <label for="email" class="invalid">MAIL NON VALIDA</label>
+              <label id="emailError">CAMPO OBBLIGATORIO</label>
               <input
-                type="email"
+                type="text"
                 id="email"
-                class="invalid"
                 placeholder="Contatto email"
               />
             </span>
             . <br />
+            <span id="detailsSpan">
             <input 
               type="text"
               id="details"
@@ -94,13 +109,14 @@
             ></input>
             <input
               type="text"
-              id="intro"
-              name="intro"
+              id="details"
+              name="details"
             ></input>
+            </span>
             . <br />
             Grazie.
           </form>
-          <button type="button" class="pageButton">INVIA MESSAGGIO ></button>
+          <button type="submit" form="contactForm" value="Update" class="pageButton submit">INVIA MESSAGGIO ></button>
       </section>
       <section>
           <h1 id="chat"># Chat</h1>

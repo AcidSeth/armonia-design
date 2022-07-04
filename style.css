@@ -93,22 +93,19 @@ section > form {
   margin-bottom: 25px;
 }
 
-section > form::after {
-  content: ".";
-  position: fixed;
-  top: 100%;
-  left: 5px;
-}
-
 section h1 {
   font: normal normal normal 40px/50px Source Code Pro;
   color: transparent;
   -webkit-text-stroke: 0.75px black;
 }
 
-form input,
-textarea {
+form input::placeholder,
+textarea::placeholder {
   font: italic normal 300 20px/25px Source Code Pro;
+}
+
+form input {
+  font: italic normal 800 20px/25px Source Code Pro;
   resize: none;
   border-style: none none dashed none;
   border-bottom: 1px solid dashed;
@@ -120,9 +117,12 @@ form > input {
   width: 25%;
 }
 
-#intro,
-#details {
+#introSpan, #detailsSpan {
   width: 95%;
+}
+
+#intro, #details{
+  width: 100%
 }
 
 span {
@@ -131,17 +131,21 @@ span {
   vertical-align: baseline;
 }
 
-label.invalid {
+form label {
   color: red;
   font-size: 10px;
   font-style: normal;
-  margin: -15px 0px -18px 0px;
+  margin: -15px 0px -23px 0px;
+  visibility: hidden;
   display: block;
 }
 
-input.invalid {
+form label.invalid {
+  visibility: visible;
+}
+
+form input.invalid {
   border-color: red;
-  display: block;
 }
 
 #chatUI {
