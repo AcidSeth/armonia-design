@@ -282,6 +282,11 @@ p#lastSeen {
   transform: scale(1.05);
 }
 
+#gift img {
+  height: 72px;
+  width: 72px;
+}
+
 #giftIcon {
   font-size: 25px;
 }
@@ -290,7 +295,6 @@ p#lastSeen {
   color: #333333;
   align-self: center;
 }
-
 
 #sendMessageForm {
   background: #f4f6f7;
@@ -365,8 +369,8 @@ div.user.tableElement {
 }
 
 .tableImg {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
 }
 
 td a {
