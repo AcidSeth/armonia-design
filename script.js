@@ -141,3 +141,50 @@ $("#gift a, #giftIcon").click(() => {
 });
 
 // Tabella
+
+const generateRandomColor = () => {
+  let maxVal = 0xffffff;
+  let randomNumber = Math.random() * maxVal;
+  randomNumber = Math.floor(randomNumber);
+  randomNumber = randomNumber.toString(16);
+  let randColor = randomNumber.padStart(6, 0);
+  return `#${randColor.toUpperCase()}`;
+}
+
+const drawUserInitials = () => {
+
+}
+
+const drawTable = (data) => {
+  let json = JSON.parse(data);
+  $.each(
+    $("#stylishTable").append(
+      `<tr>
+          <td class="tableData"><p>${data.name}</p></td>
+          <td class="tableData"><p>${data.username}</p></td>
+          <td class="tableData"><p>${data.address.city}</p></td>
+          <td class="tableData"><p>${data.name}</p></td>
+          <td class="stylish_table_data"><p class="stylish_table_cancel">Cancella</p></td>
+          `
+    )
+  );
+};
+
+
+  
+$("#tableResetButton").click(() => {
+  $.ajax("https://jsonplaceholder.typicode.com/users", {
+    method: "GET",
+    dataType: "json",
+    success: drawTable,
+    error: (xhr, status, error) => {
+      alert("Errore:" + xhr.responseText);
+    },
+    
+  });
+});
+
+$("#stylishTable").on("click", ".cancel", () => {
+  $(this).closest("tr").remove();
+  return false;
+});
