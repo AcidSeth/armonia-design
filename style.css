@@ -219,9 +219,9 @@ p#lastSeen {
   padding: 12px 30px 12px 15px;
   font: normal normal normal 14px/18px Source Code Pro;
   color: #333333;
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
   word-wrap: break-word;
-  text-align:justify;
+  text-align: justify;
   white-space: normal;
 }
 
@@ -336,32 +336,32 @@ p#lastSeen {
 
 table {
   width: 100%;
+  display: flex;
   border-collapse: collapse;
   color: #333333;
   font: normal normal normal 18px/23px "Source Code Pro", monospace;
-  text-align: justify;
-}
-
-td {
-  padding: 15px 25px;
-}
-
-th {
-  font-weight: 600;
-  padding: 30px 25px;
-}
-
-.initials {
-  
-}
-
-.blankRow {
-  padding: 10px;
+  text-align: start;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 #tableHeader {
   background: #aebed8;
   color: white;
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+th {
+  font-weight: 600;
+  padding: 30px 30px;
+}
+
+td {
+  padding: 15px 25px;
 }
 
 div.user.tableElement {
@@ -369,12 +369,27 @@ div.user.tableElement {
   flex-direction: column wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 35px;
+}
+
+.table.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
 }
 
 .tableImg {
   width: 48px;
   height: 48px;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color:#f4f6f7;
+    -webkit-text-stroke: 0.15px black;
+  font: normal normal 900 30px/23px "Source Code Pro", monospace;
 }
 
 td a {

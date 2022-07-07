@@ -149,29 +149,41 @@ const generateRandomColor = () => {
   randomNumber = randomNumber.toString(16);
   let randColor = randomNumber.padStart(6, 0);
   return `#${randColor.toUpperCase()}`;
-}
-
-const drawUserInitials = () => {
-
-}
-
-const drawTable = (data) => {
-  let json = JSON.parse(data);
-  $.each(
-    $("#stylishTable").append(
-      `<tr>
-          <td class="tableData"><p>${data.name}</p></td>
-          <td class="tableData"><p>${data.username}</p></td>
-          <td class="tableData"><p>${data.address.city}</p></td>
-          <td class="tableData"><p>${data.name}</p></td>
-          <td class="stylish_table_data"><p class="stylish_table_cancel">Cancella</p></td>
-          `
-    )
-  );
 };
 
+const drawUserInitials = (nameData) => {
+  let nameStr = JSON.stringify(nameData);
+  let nameSurname = nameStr.split(" ");
+  let name = nameSurname[0];
+  let surname = nameSurname[1];
 
-  
+  return (initials = name.charAt(1) + surname.charAt(0));
+};
+
+const drawTable = (data) => {
+  $("#tableHeader ~ tr").remove();
+  $.each($(data), (i) => {
+    $("table").append(
+      `<tr>
+      <td class="tableData"><div class="table user"><span class="tableImg" >
+      ${drawUserInitials(data[i].name)}
+      </span><span>${data[i].name}</span></div></td>
+      
+      <td class="tableData"><p>${data[i].username}</p></td>
+      <td class="tableData"><p>${data[i].address.city}</p></td>
+      <td class="tableData"><p class="tableErase"><u>Cancella</u></p></td>
+      </tr>`
+    );
+    $(".tableImg").each((i) => {
+      let len = $(".tableImg").length;
+      let random = Math.floor(Math.random() * len);
+      $(".tableImg")
+        .eq(random)
+        .css("backgroundColor", `${generateRandomColor()}`);
+    });
+  });
+};
+
 $("#tableResetButton").click(() => {
   $.ajax("https://jsonplaceholder.typicode.com/users", {
     method: "GET",
@@ -180,11 +192,9 @@ $("#tableResetButton").click(() => {
     error: (xhr, status, error) => {
       alert("Errore:" + xhr.responseText);
     },
-    
   });
 });
 
-$("#stylishTable").on("click", ".cancel", () => {
+$("table").on("click", ".tableErase", () => {
   $(this).closest("tr").remove();
-  return false;
 });
