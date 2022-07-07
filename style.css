@@ -350,18 +350,38 @@ table {
   background: #aebed8;
   color: white;
   display: flex;
-  flex: 2;
-  justify-content: space-between;
-  gap: 100px;
+  justify-content: space-evenly;
+}
+
+th:nth-of-type(1) {
+  flex: 1.5;
+}
+
+th:nth-of-type(2) {
+flex: 1; 
+text-align: right;
+}
+
+.blankCol {
+  flex: 0 1 6%;
+}
+
+th:nth-of-type(4) {
+  flex: 1.5;
+}
+
+th:nth-of-type(5) {
+  flex: 0.5;
 }
 
 th {
   font-weight: 600;
-  padding: 30px 30px;
+  padding: 30px 25px;
+  text-align: left;
 }
 
 td {
-  padding: 15px 25px;
+  padding: 15px 30px;
 }
 
 div.user.tableElement {
@@ -387,8 +407,8 @@ div.user.tableElement {
   justify-content: center;
   align-content: center;
   text-align: center;
-  color:#f4f6f7;
-    -webkit-text-stroke: 0.15px black;
+  color: #f4f6f7;
+  -webkit-text-stroke: 0.15px black;
   font: normal normal 900 30px/23px "Source Code Pro", monospace;
 }
 
