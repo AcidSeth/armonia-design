@@ -351,23 +351,21 @@ table {
   color: white;
   display: flex;
   justify-content: space-evenly;
+  padding: 0px 10px;
 }
 
-th:nth-of-type(1) {
+th:nth-of-type(1),
+th:nth-of-type(4) {
   flex: 1.5;
 }
 
 th:nth-of-type(2) {
-flex: 1; 
-text-align: right;
+  flex: 1;
+  text-align: right;
 }
 
 .blankCol {
   flex: 0 1 6%;
-}
-
-th:nth-of-type(4) {
-  flex: 1.5;
 }
 
 th:nth-of-type(5) {
