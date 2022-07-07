@@ -392,6 +392,7 @@ div.user.tableElement {
   font: normal normal 900 30px/23px "Source Code Pro", monospace;
 }
 
-td a {
+.action {
+  text-decoration: underline;
   color: #333333;
 }

@@ -162,19 +162,35 @@ const drawUserInitials = (nameData) => {
 
 const drawTable = (data) => {
   $("#tableHeader ~ tr").remove();
-  $.each($(data), (i) => {
-    $("table").append(
-      `<tr>
-      <td class="tableData"><div class="table user"><span class="tableImg" >
-      ${drawUserInitials(data[i].name)}
-      </span><span>${data[i].name}</span></div></td>
-      
-      <td class="tableData"><p>${data[i].username}</p></td>
-      <td class="tableData"><p>${data[i].address.city}</p></td>
-      <td class="tableData"><p class="tableErase"><u>Cancella</u></p></td>
-      </tr>`
+  data.forEach((item, i) => {
+    let tdUser =
+      $(`<td class="tableData"><div class="table user"><span class="tableImg">
+      ${drawUserInitials(item.name)}
+      </span><span>${item.name}</span></div></td>`);
+
+    let tdUserName = $(`<td class="tableData"><p>${item.username}</p></td>`);
+    let tdAddress = $(
+      `<td class="tableData"><p>${item.address.city}</p></td>`
     );
-    $(".tableImg").each((i) => {
+
+    let tdAction = $(
+      `<td class="tableData action" data-index="${i}">Cancella</td>`
+    ).on("click", (e) => {
+      let index = $(e.target).attr("data-index");
+      let trID = "#table-" + index;
+      $(trID).remove();
+    });
+    
+    let tr = $(`<tr id="${"table-" + i}"></tr>`);
+
+    $(tr)
+      .append(tdUser)
+      .append(tdUserName)
+      .append(tdAddress)
+      .append(tdAction)
+      .appendTo($("table"));
+
+    $(".tableImg").each(() => {
       let len = $(".tableImg").length;
       let random = Math.floor(Math.random() * len);
       $(".tableImg")
@@ -193,8 +209,4 @@ $("#tableResetButton").click(() => {
       alert("Errore:" + xhr.responseText);
     },
   });
-});
-
-$("table").on("click", ".tableErase", () => {
-  $(this).closest("tr").remove();
 });
